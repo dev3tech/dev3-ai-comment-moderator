@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Comment &amp; Community Moderator for WordPress: Documentation</title>
+<style>
+:root { --brand: #3730a3; --text: #1f2328; --muted: #4b5563; --line: #e3e6eb; --soft: #f6f7fb; }
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: #fff; }
+header { background: linear-gradient(135deg, #3730a3, #2563eb); color: #fff; padding: 40px 16px; }
+header .wrap, main { max-width: 980px; margin: 0 auto; }
+header h1 { margin: 0 0 6px; font-size: clamp(24px, 4vw, 34px); }
+header p { margin: 0; opacity: .92; }
+nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); overflow-x: auto; white-space: nowrap; padding: 0 16px; z-index: 2; }
+nav a { display: inline-block; padding: 12px 10px; color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a:hover, nav a:focus { color: var(--brand); }
+main { padding: 8px 16px 64px; }
+h2 { margin-top: 48px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 24px; }
+h3 { margin-top: 28px; font-size: 18px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px; }
+code { background: var(--soft); padding: 2px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+pre { background: #0f172a; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: inherit; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; display: block; overflow-x: auto; }
+th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 8px 10px; vertical-align: top; }
+th { background: var(--soft); }
+.note { background: #eef2ff; border-left: 4px solid var(--brand); padding: 12px 16px; border-radius: 6px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.shots figure { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.shots img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
+.shots figcaption { padding: 8px 12px; font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+	<h1>DEV3 AI Comment &amp; Community Moderator for WordPress</h1>
+	<p>Version 1.0.0 · Rules and DEV3 AI screen comments, WooCommerce reviews and bbPress posts. You stay in charge: the AI only holds or spams, never approves or deletes.</p>
+</div></header>
+<nav aria-label="Sections">
+	<a href="#install">Install</a><a href="#quick">Quick start</a><a href="#sources">Sources</a><a href="#rules">Rule screen</a><a href="#ai">DEV3 AI policy</a><a href="#queue">Queue</a><a href="#replies">Replies &amp; voice</a><a href="#discussions">Discussions</a><a href="#summary">Summaries on site</a><a href="#nudge">Be-kind nudge</a><a href="#scan">Scanner &amp; tester</a><a href="#gemini">Gemini key</a><a href="#budget">Budget &amp; usage</a><a href="#privacy">Privacy</a><a href="#hooks">Hooks</a><a href="#rest">REST API</a><a href="#faqs">FAQ</a><a href="#changelog">Changelog</a>
+</nav>
+<main>
+
+<section class="shots" aria-label="Screenshots" style="margin-top:24px">
+	<figure><img src="screenshots/1-dashboard.png" alt="Dashboard"><figcaption>Dashboard</figcaption></figure>
+	<figure><img src="screenshots/2-queue.png" alt="Moderation queue"><figcaption>Moderation queue with reasons</figcaption></figure>
+	<figure><img src="screenshots/3-reply-draft.png" alt="Item details with AI labels and reply draft"><figcaption>AI labels and a brand-voice reply draft</figcaption></figure>
+	<figure><img src="screenshots/4-discussion-summary.png" alt="Discussion summary"><figcaption>Discussion summary and sentiment</figcaption></figure>
+	<figure><img src="screenshots/5-be-kind-nudge.png" alt="Be kind nudge on a phone"><figcaption>"Be kind" nudge on the front end</figcaption></figure>
+	<figure><img src="screenshots/6-policy.png" alt="Policy and rules"><figcaption>Policy &amp; rules</figcaption></figure>
+</section>
+
+<h2 id="install">Install</h2>
+<ol>
+	<li>Requirements: WordPress 6.0+, PHP 7.4+ (tested on 8.3). Optional: WooCommerce 8+ (reviews), bbPress 2.6+ (forums), Akismet.</li>
+	<li>In <strong>Plugins → Add New → Upload Plugin</strong>, upload <code>dev3-ai-comment-moderator.zip</code> and activate it.</li>
+	<li>The menu <strong>DEV3 AI Moderator</strong> appears below Comments. Its bubble counts items that need review.</li>
+</ol>
+<p>No licence key or activation is needed. Updates ship as new zips.</p>
+
+<h2 id="quick">Quick start</h2>
+<ol>
+	<li>New comments are screened right away by the rule screen. Open <strong>Queue</strong> to see what was held, spammed or flagged and why.</li>
+	<li>Add your Google Gemini key in <strong>API Config</strong> to add AI scores for spam, toxicity, harassment, off-topic and personal data.</li>
+	<li>Tune actions and thresholds in <strong>Policy &amp; rules</strong>; try them in the <em>Policy tester</em>.</li>
+	<li>Run <em>Scan existing content</em> to include older comments and fill Discussions with sentiment.</li>
+	<li>Set your brand voice in <strong>Replies &amp; voice</strong>, and the visitor-facing nudge in <strong>Front-end</strong>.</li>
+</ol>
+
+<h2 id="sources">Sources</h2>
+<table>
+	<tr><th>Source</th><th>What is screened</th><th>How status changes</th></tr>
+	<tr><td>WordPress comments</td><td>Comments on any post type (types <code>comment</code>; pingbacks, order notes etc. are ignored)</td><td><code>wp_set_comment_status</code>, <code>wp_spam_comment</code></td></tr>
+	<tr><td>WooCommerce reviews</td><td>Comments/reviews on products, with the star rating</td><td>Same as comments</td></tr>
+	<tr><td>bbPress</td><td>New topics (title + text) and replies</td><td><code>bbp_unapprove_*</code>, <code>bbp_spam_*</code> (restorable)</td></tr>
+</table>
+<p>Users who can moderate comments (and bbPress moderators) are trusted and skip screening; switch this off under Sources.</p>
+
+<h2 id="rules">Rule screen</h2>
+<p>Runs before anything else, with no AI and no network. Each rule has an action: <em>Off</em>, <em>Flag only</em> (shows in the queue, stays live), <em>Hold for review</em> or <em>Move to spam</em>. The strictest action wins, and content is only ever moved down (live → held → spam).</p>
+<table>
+	<tr><th>Rule</th><th>Default</th><th>Notes</th></tr>
+	<tr><td>Links</td><td>Hold above 2</td><td>Counts URLs, <code>www.</code> hosts and anchors.</td></tr>
+	<tr><td>Blocklist</td><td>Hold</td><td>Whole words/phrases in text, name, email and website.</td></tr>
+	<tr><td>Posting rate</td><td>Hold above 5 in 10 min</td><td>Per IP (hashed) or email.</td></tr>
+	<tr><td>Duplicates</td><td>Spam</td><td>Same normalised text by the same author/IP on another post, or on 2+ other posts within 30 days.</td></tr>
+	<tr><td>Personal data</td><td>Hold</td><td>Emails, phone numbers, card numbers (Luhn-checked), IP addresses.</td></tr>
+	<tr><td>Profanity</td><td>Flag</td><td>Built-in insult list; extend with <code>dev3cm_profanity_words</code>.</td></tr>
+	<tr><td>Akismet</td><td>Spam</td><td>Records Akismet's spam verdict as a reason.</td></tr>
+</table>
+
+<h2 id="ai">DEV3 AI policy</h2>
+<p>DEV3 AI scores each item from 0 to 100 % for five labels and gives a one-line reason. The post title and excerpt are sent along so off-topic can be judged, and the parent comment for replies.</p>
+<ul>
+	<li><strong>Before publishing</strong> (default): waits up to the timeout (8 s), then the rules decide and the AI retries in the background.</li>
+	<li><strong>In the background</strong>: the item is published per the rules and moved later if the AI says so.</li>
+	<li><strong>Policy matrix</strong>: per label, an action and the score that triggers it (defaults: spam 85 % → spam, toxicity 75 % → hold, harassment 70 % → hold, off-topic 85 % → flag, personal data 70 % → hold).</li>
+</ul>
+<p class="note">The AI never approves and never deletes. Once a moderator approves, holds or marks an item reviewed, the policy no longer moves it.</p>
+
+<h2 id="queue">Queue</h2>
+<p>Views: Needs review, Held, Flagged but live, Spam, Reviewed, Trash, All. Filter by source and reason, search text/names/emails, select rows for bulk Approve, Hold, Spam, Mark reviewed, Re-scan with DEV3 AI or Trash (the WordPress trash, restorable). Click a row for details: full text, author, post, parent, reasons, AI label meters with your thresholds, history and the reply composer. Export the view as CSV.</p>
+
+<h2 id="replies">Replies &amp; voice</h2>
+<p>Reply from the item drawer as yourself (comment reply, review reply or bbPress reply), optionally approving the item at the same time. Templates support <code>{author}</code>, <code>{post}</code> and <code>{site}</code>. <strong>Draft reply with DEV3 AI</strong> writes a reply in your tone, guidelines and sign-off; you can edit it, regenerate or reject it. Nothing is posted until you click <em>Post this reply</em>.</p>
+
+<h2 id="discussions">Discussions &amp; sentiment</h2>
+<p>Every post, product and forum topic with screened items shows its item counts, sentiment and a positive/neutral/negative mix. Sentiment comes from DEV3 AI when an item was classified, otherwise from a built-in lexicon. Open a discussion to see frequent words and to <strong>Summarize with DEV3 AI</strong>: a short summary, themes with their own sentiment, open questions and suggested follow-ups. Save it to keep it; a badge shows when new comments make it out of date.</p>
+
+<h2 id="summary">Summaries on the site</h2>
+<p>Only saved summaries marked <em>Show on site</em> appear. Place them with the <strong>Discussion summary</strong> block, the shortcode <code>[dev3cm_summary]</code> / <code>[dev3cm_summary post_id="123" title="no"]</code>, or set Front-end → Placement to <em>After the post content</em>. An optional note says the summary was written with AI and reviewed.</p>
+
+<h2 id="nudge">"Be kind" nudge</h2>
+<p>On comment, review and bbPress forms, the writer sees a gentle prompt when the text contains insults, all caps or piles of !!!. The check runs in the browser with no network. With <em>Ask DEV3 AI before posting</em>, the text is checked by DEV3 AI (6 s limit, cached, rate-limited, same-origin only) and the writer can accept kinder wording. The writer can always post anyway; server-side moderation still applies. Visitor text is neutral (no DEV3 branding) and follows your theme; set the accent colour in Front-end. An optional community note shows under the comment box.</p>
+
+<h2 id="scan">Scanner &amp; tester</h2>
+<p><strong>Scan existing content</strong> creates records for comments, reviews and forum posts from the last N days (background job with progress, cancel and retry). Choose whether to add DEV3 AI scores and whether matches are moved per policy or only flagged. The <strong>Policy tester</strong> shows what the saved rules (and optionally the AI) would do with a sample comment; nothing is stored.</p>
+
+<h2 id="gemini">Google Gemini API key</h2>
+<ol>
+	<li>Create a key at <a href="https://aistudio.google.com/apikey">Google AI Studio</a>.</li>
+	<li>Paste it in <strong>API Config</strong> and click Validate. It is stored encrypted and never sent to the browser. Or define <code>DEV3CM_GEMINI_API_KEY</code> in <code>wp-config.php</code>.</li>
+	<li>Default models: gemini-2.5-flash (classification, replies, nudge) and gemini-2.5-pro for very long discussions.</li>
+</ol>
+
+<h2 id="budget">Budget &amp; usage</h2>
+<p>API Config sets a monthly budget (AI pauses when it is reached and the rules keep working), an AI on/off switch, a front-end AI switch (affects the nudge and the "before publishing" check), the result cache and PII masking. Usage Logs show requests, tokens and estimated cost per feature.</p>
+
+<h2 id="privacy">Privacy</h2>
+<p>Moderation records store author name, email, a hashed IP, an excerpt and the decision. They are part of WordPress personal-data export and erase (erase anonymises them), and are pruned after the retention period (Policy → Data). The plugin never deletes comments. A privacy-policy snippet naming Google Gemini is added to Settings → Privacy.</p>
+
+<h2 id="hooks">Hooks</h2>
+<table>
+	<tr><th>Hook</th><th>Type</th><th>Use</th></tr>
+	<tr><td><code>dev3cm_rule_flags( $flags, $input )</code></td><td>filter</td><td>Add your own rules: <code>[ 'code' =&gt; 'x', 'detail' =&gt; '…', 'action' =&gt; 'hold' ]</code>.</td></tr>
+	<tr><td><code>dev3cm_policy_decision( $decision, $flags, $labels )</code></td><td>filter</td><td>Override the final decision (<code>none|flag|hold|spam</code>).</td></tr>
+	<tr><td><code>dev3cm_is_trusted( $trusted, $source )</code></td><td>filter</td><td>Decide who skips screening.</td></tr>
+	<tr><td><code>dev3cm_comment_types( $types )</code></td><td>filter</td><td>Comment types to screen (default comment, review).</td></tr>
+	<tr><td><code>dev3cm_profanity_words( $words )</code></td><td>filter</td><td>Insult/profanity list (rules + nudge).</td></tr>
+	<tr><td><code>dev3cm_sentiment_lexicon( $lex )</code></td><td>filter</td><td>Non-AI sentiment words (-3..3).</td></tr>
+	<tr><td><code>dev3cm_item_screened( $id, $result )</code></td><td>action</td><td>After a new item is screened and stored.</td></tr>
+	<tr><td><code>dev3cm_prompt_classify</code>, <code>dev3cm_prompt_reply</code>, <code>dev3cm_prompt_summary</code>, <code>dev3cm_prompt_nudge</code></td><td>filter</td><td>Adjust prompt templates.</td></tr>
+	<tr><td><code>dev3cm_public_rate_limit( $limit, $bucket )</code></td><td>filter</td><td>Nudge checks per minute per IP (default 12).</td></tr>
+	<tr><td><code>dev3cm_ai_guard</code>, <code>dev3cm_mask_pii</code>, <code>dev3cm_model_prices</code></td><td>filter</td><td>Shared DEV3 core controls.</td></tr>
+</table>
+
+<h2 id="rest">REST API</h2>
+<p>Namespace <code>dev3cm/v1</code>. Admin routes need <code>manage_options</code> (filterable) and a REST nonce: <code>items</code>, <code>items/&lt;id&gt;</code>, <code>items/&lt;id&gt;/action</code>, <code>items/bulk</code>, <code>items/&lt;id&gt;/classify</code>, <code>items/&lt;id&gt;/reply-draft</code>, <code>items/&lt;id&gt;/reply</code>, <code>threads</code>, <code>threads/&lt;post&gt;</code>, <code>threads/&lt;post&gt;/summarize</code>, <code>threads/&lt;post&gt;/summary</code>, <code>stats</code>, <code>scan</code>, <code>test</code>, <code>export/csv</code>. Public: <code>POST public/nudge { text }</code> (same-origin, rate-limited).</p>
+
+<h2 id="faqs">FAQ</h2>
+<h3>Does it work without an API key?</h3>
+<p>Yes. Rules, queue, replies with templates, lexicon sentiment, keywords, the local nudge and saved summaries all work without AI.</p>
+<h3>Can the AI hide a good comment?</h3>
+<p>It can hold one for review if it crosses your threshold; you approve it in one click and it will not be moved again. Raise the threshold or set the label to <em>Flag only</em> for a softer policy.</p>
+<h3>Does it slow down commenting?</h3>
+<p>Rules take milliseconds. The AI check in "before publishing" mode is capped by the timeout; use background mode for zero wait.</p>
+<h3>Does it work with page caching?</h3>
+<p>Yes. The nudge endpoint needs no nonce, so cached pages keep working.</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong> – Initial release.</p>
+</main>
+</body>
+</html>

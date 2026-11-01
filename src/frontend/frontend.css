@@ -1,0 +1,263 @@
+/*
+ * Front-end nudge, community note and discussion summary. Inherits the theme's font and text colour.
+ * Theme it with --dev3cm-accent, --dev3cm-line, --dev3cm-tint, --dev3cm-round.
+ * Resets use :not(#dev3cm-x) so classic-theme button styles do not leak in.
+ */
+.dev3cm-nudge,
+.dev3cm-summary,
+.dev3cm-note {
+	--dev3cm-accent: #2563eb;
+	--dev3cm-on-accent: #fff;
+	--dev3cm-line: rgba(127, 127, 127, 0.3);
+	--dev3cm-tint: rgba(37, 99, 235, 0.07);
+	--dev3cm-round: 10px;
+	box-sizing: border-box;
+	max-width: 100%;
+	color: inherit;
+	font-family: inherit;
+	line-height: 1.55;
+	overflow-wrap: anywhere;
+}
+
+@supports (color: color-mix(in srgb, red 10%, transparent)) {
+	.dev3cm-nudge,
+	.dev3cm-summary {
+		--dev3cm-tint: color-mix(in srgb, var(--dev3cm-accent) 8%, transparent);
+		--dev3cm-line: color-mix(in srgb, currentColor 20%, transparent);
+	}
+}
+
+.dev3cm-nudge *,
+.dev3cm-summary * {
+	box-sizing: inherit;
+}
+
+.dev3cm-note {
+	margin: 0.5em 0 0;
+	font-size: 0.875em;
+	opacity: 0.85;
+}
+
+.dev3cm-checking {
+	margin: 0.5em 0 0;
+	font-size: 0.875em;
+}
+
+/* Nudge */
+.dev3cm-nudge {
+	margin: 1em 0;
+	padding: 1em 1.1em;
+	border: 1px solid var(--dev3cm-line);
+	border-left: 4px solid var(--dev3cm-accent);
+	border-radius: var(--dev3cm-round);
+	background: var(--dev3cm-tint);
+	font-size: 0.95rem;
+}
+
+.dev3cm-nudge p:not(#dev3cm-x) {
+	margin: 0 0 0.4em;
+}
+
+.dev3cm-nudge .dev3cm-nudge__title:not(#dev3cm-x) {
+	font-weight: 700;
+	font-size: 1.05em;
+}
+
+.dev3cm-nudge__title:focus {
+	outline: 2px solid var(--dev3cm-accent);
+	outline-offset: 2px;
+}
+
+.dev3cm-nudge ul.dev3cm-nudge__why:not(#dev3cm-x) {
+	margin: 0.25em 0 0.6em;
+	padding: 0 0 0 1.2em;
+	list-style: disc;
+	border: 0 !important;
+	display: block !important;
+}
+
+.dev3cm-nudge ul.dev3cm-nudge__why:not(#dev3cm-x) li {
+	/* WooCommerce's review tabs force tab styles on every nested list. */
+	display: list-item !important;
+	margin: 0.15em 0;
+	padding: 0;
+	border: 0 !important;
+	list-style: disc;
+	background: none;
+}
+
+.dev3cm-summary ul.dev3cm-summary__themes:not(#dev3cm-x) li {
+	display: list-item !important;
+	margin: 0;
+	list-style: none;
+}
+
+.dev3cm-nudge__alt {
+	margin: 0.5em 0 0.75em;
+}
+
+.dev3cm-nudge .dev3cm-nudge__alt-label:not(#dev3cm-x) {
+	font-weight: 600;
+	font-size: 0.9em;
+}
+
+.dev3cm-nudge blockquote.dev3cm-nudge__alt-text:not(#dev3cm-x) {
+	margin: 0;
+	padding: 0.6em 0.8em;
+	border: 1px dashed var(--dev3cm-line);
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.55);
+	font-style: normal;
+	font-size: 1em;
+	quotes: none;
+	white-space: pre-line;
+}
+
+.dev3cm-nudge blockquote.dev3cm-nudge__alt-text:not(#dev3cm-x)::before,
+.dev3cm-nudge blockquote.dev3cm-nudge__alt-text:not(#dev3cm-x)::after {
+	content: none;
+}
+
+.dev3cm-nudge__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-top: 0.75em;
+}
+
+.dev3cm-nudge .dev3cm-btn:not(#dev3cm-x) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	margin: 0;
+	padding: 0.55em 1.05em;
+	border: 1px solid var(--dev3cm-accent);
+	border-radius: 999px;
+	background: transparent;
+	box-shadow: none;
+	color: inherit;
+	font: inherit;
+	font-size: 0.95em;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: normal;
+	text-transform: none;
+	text-decoration: none;
+	cursor: pointer;
+	width: auto;
+}
+
+.dev3cm-nudge .dev3cm-btn--primary:not(#dev3cm-x) {
+	background: var(--dev3cm-accent);
+	color: var(--dev3cm-on-accent);
+}
+
+.dev3cm-nudge .dev3cm-btn--ghost:not(#dev3cm-x) {
+	border-color: var(--dev3cm-line);
+}
+
+.dev3cm-nudge .dev3cm-btn:not(#dev3cm-x):hover {
+	filter: brightness(0.95);
+}
+
+.dev3cm-nudge .dev3cm-btn:not(#dev3cm-x):focus-visible {
+	outline: 2px solid var(--dev3cm-accent);
+	outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+	.dev3cm-nudge .dev3cm-btn:not(#dev3cm-x) {
+		flex: 1 1 100%;
+	}
+}
+
+/* Discussion summary */
+.dev3cm-summary {
+	margin: 2em 0;
+	padding: 1.1em 1.25em;
+	border: 1px solid var(--dev3cm-line);
+	border-radius: var(--dev3cm-round);
+	background: var(--dev3cm-tint);
+}
+
+.dev3cm-summary h2.dev3cm-summary__title:not(#dev3cm-x) {
+	margin: 0 0 0.35em;
+	font-size: 1.15em;
+	line-height: 1.3;
+}
+
+.dev3cm-summary p:not(#dev3cm-x) {
+	margin: 0 0 0.6em;
+}
+
+.dev3cm-summary .dev3cm-summary__meta:not(#dev3cm-x) {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4em 0.75em;
+	font-size: 0.875em;
+}
+
+.dev3cm-mood {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	font-weight: 600;
+}
+
+.dev3cm-mood::before {
+	content: "";
+	width: 0.65em;
+	height: 0.65em;
+	border-radius: 50%;
+	background: #64748b;
+}
+
+.dev3cm-mood--positive::before {
+	background: #15803d;
+}
+
+.dev3cm-mood--negative::before {
+	background: #b91c1c;
+}
+
+.dev3cm-summary ul.dev3cm-summary__themes:not(#dev3cm-x) {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4em;
+	margin: 0 0 0.6em;
+	padding: 0;
+	list-style: none;
+}
+
+.dev3cm-theme {
+	margin: 0;
+	padding: 0.2em 0.7em;
+	border: 1px solid var(--dev3cm-line);
+	border-radius: 999px;
+	font-size: 0.85em;
+}
+
+.dev3cm-theme--positive {
+	border-color: rgba(21, 128, 61, 0.45);
+}
+
+.dev3cm-theme--negative {
+	border-color: rgba(185, 28, 28, 0.45);
+}
+
+.dev3cm-summary .dev3cm-summary__note:not(#dev3cm-x) {
+	margin: 0;
+	font-size: 0.8em;
+	opacity: 0.8;
+}
+
+.dev3cm-sr {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

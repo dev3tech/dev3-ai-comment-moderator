@@ -1,0 +1,2690 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Comment & Community Moderator for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-comment-moderator\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-25T04:07:27+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-comment-moderator\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-comment-moderator.php
+msgid "DEV3 AI Comment & Community Moderator for WordPress"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-comment-moderator.php
+msgid "https://dev3.tech/item/dev3-ai-comment-moderator"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-comment-moderator.php
+msgid "AI moderation for WordPress comments, WooCommerce reviews and bbPress replies: rule screening, toxicity and spam classification, a moderation queue, reply drafts, thread summaries and sentiment."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-comment-moderator.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-comment-moderator.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:48
+msgid "DEV3 AI Moderator"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:81
+#: build/blocks.js:1
+msgid "Settings"
+msgstr ""
+
+#. translators: 1: label, 2: score percent
+#: includes/Ai/Classifier.php:175
+#, php-format
+msgid "Highest: %1$s %2$d%%"
+msgstr ""
+
+#: includes/Ai/Classifier.php:219
+msgid "DEV3 AI returned no result for this item."
+msgstr ""
+
+#: includes/Ai/Classifier.php:304
+msgid "Not found or source switched off."
+msgstr ""
+
+#: includes/Ai/Writer.php:72
+#: includes/Rest/Admin_Controller.php:127
+msgid "This item no longer exists."
+msgstr ""
+
+#: includes/Ai/Writer.php:98
+msgid "DEV3 AI returned an empty reply. Try again."
+msgstr ""
+
+#: includes/Ai/Writer.php:132
+msgid "there"
+msgstr ""
+
+#: includes/Ai/Writer.php:149
+#: includes/Rest/Admin_Controller.php:337
+#: includes/Rest/Admin_Controller.php:382
+msgid "This post no longer exists."
+msgstr ""
+
+#: includes/Ai/Writer.php:152
+msgid "There are not enough approved comments to summarize yet (at least 2)."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:212
+msgid "Unsupported image type."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:216
+msgid "The image data is invalid."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "AI features are turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:292
+msgid "Turn AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Storefront AI is turned off."
+msgstr ""
+
+#: includes/Core3/Api/Ai.php:294
+msgid "Turn storefront AI back on in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:63
+msgid "AI paused: the monthly AI budget is reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:64
+msgid "Raise the monthly cap in API Config, or wait until the budget resets on the 1st of next month."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:80
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:81
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:89
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:90
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:98
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:99
+#: includes/Core3/Api/Gemini_Client.php:250
+#: includes/Core3/Api/Gemini_Client.php:422
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:128
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:129
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:137
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:139
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:140
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:148
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:149
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:156
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:157
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:164
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:165
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:172
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:173
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:180
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:181
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:250
+msgid "The AI returned an incomplete embedding batch."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI blocked this image request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:368
+msgid "The AI did not return an image."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+#: includes/Core3/Api/Gemini_Client.php:472
+#: includes/Core3/Api/Gemini_Client.php:508
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:369
+msgid "Try again, or describe the image more concretely."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:421
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:471
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:507
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:515
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:516
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:523
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:524
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Api/Prompts.php:124
+msgid "Unknown prompt template."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:90
+msgid "Unknown job type."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:116
+msgid "The job could not be saved."
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:238
+#: build/admin.js:1
+msgid "Failed"
+msgstr ""
+
+#: includes/Core3/Core/Jobs.php:339
+#: includes/Core3/Rest/Core_Controller.php:112
+msgid "Job not found."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:33
+#: includes/Core3/Core/Privacy.php:34
+#: includes/Core3/Core/Privacy.php:165
+msgid "AI usage log"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/Core3/Core/Privacy.php:85
+#, php-format
+msgid "This site uses %s, which sends the content needed for AI features (for example product details, reviews or form text) to Google Gemini, operated by Google LLC, as a data processor. Only the fields needed for the requested feature are sent. Google's terms and privacy policy apply: https://ai.google.dev/gemini-api/terms"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:87
+msgid "The plugin keeps a usage log (time, feature, token counts and the user account that triggered the request) to show AI usage and costs to administrators. It does not store the prompts."
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:169
+msgid "Feature"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:173
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:177
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: includes/Core3/Core/Privacy.php:181
+#: includes/Data/Items.php:644
+msgid "Date"
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:194
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+#: includes/Core3/Rest/Core_Controller.php:115
+#: includes/Rest/Admin_Controller.php:225
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Data/Items.php:536
+msgid "(deleted)"
+msgstr ""
+
+#: includes/Data/Items.php:632
+#: includes/Plugin.php:136
+#: includes/Plugin.php:137
+msgid "Comment moderation records"
+msgstr ""
+
+#: includes/Data/Items.php:636
+msgid "Excerpt"
+msgstr ""
+
+#: includes/Data/Items.php:640
+msgid "Moderation status"
+msgstr ""
+
+#: includes/Data/Items.php:668
+#: build/admin.js:1
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Anonymous"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:62
+msgid "Before you post…"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:63
+msgid "Your comment may come across as hurtful to others. Would you like to edit it?"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:64
+msgid "Edit my comment"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:65
+msgid "Use suggested wording"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:66
+msgid "Post anyway"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:67
+msgid "Checking your comment…"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:68
+msgid "A kinder way to say it:"
+msgstr ""
+
+#: includes/Frontend/Nudge.php:70
+msgid "It contains words that may hurt someone."
+msgstr ""
+
+#: includes/Frontend/Nudge.php:71
+msgid "Writing in capital letters can read as shouting."
+msgstr ""
+
+#: includes/Frontend/Nudge.php:72
+msgid "Lots of exclamation or question marks can feel aggressive."
+msgstr ""
+
+#: includes/Frontend/Nudge.php:117
+#: build/admin.js:5
+msgid "Please keep it kind and on topic. Comments are moderated."
+msgstr ""
+
+#: includes/Frontend/Summary.php:51
+#: includes/Frontend/Summary.php:163
+#: build/admin.js:5
+#: build/blocks.js:1
+msgid "Discussion summary"
+msgstr ""
+
+#: includes/Frontend/Summary.php:139
+msgid "Mostly positive"
+msgstr ""
+
+#: includes/Frontend/Summary.php:140
+msgid "Mixed"
+msgstr ""
+
+#: includes/Frontend/Summary.php:141
+msgid "Mostly critical"
+msgstr ""
+
+#: includes/Frontend/Summary.php:161
+msgid "What customers are saying"
+msgstr ""
+
+#: includes/Frontend/Summary.php:161
+msgid "What readers are saying"
+msgstr ""
+
+#. translators: %d: number of comments
+#: includes/Frontend/Summary.php:171
+#, php-format
+msgid "Based on %d comment"
+msgid_plural "Based on %d comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Frontend/Summary.php:182
+msgid "Summary written with AI and reviewed by the site team."
+msgstr ""
+
+#: includes/Moderation/Pipeline.php:254
+#: includes/Moderation/Pipeline.php:555
+msgid "No issues found"
+msgstr ""
+
+#: includes/Moderation/Policy.php:38
+#: build/admin.js:1
+msgid "Too many links"
+msgstr ""
+
+#: includes/Moderation/Policy.php:39
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Blocklist"
+msgstr ""
+
+#: includes/Moderation/Policy.php:40
+#: build/admin.js:1
+msgid "Posting too fast"
+msgstr ""
+
+#: includes/Moderation/Policy.php:41
+#: build/admin.js:1
+msgid "Duplicate"
+msgstr ""
+
+#: includes/Moderation/Policy.php:42
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Personal data"
+msgstr ""
+
+#: includes/Moderation/Policy.php:43
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Profanity"
+msgstr ""
+
+#: includes/Moderation/Policy.php:44
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Akismet"
+msgstr ""
+
+#: includes/Moderation/Policy.php:45
+#: build/admin.js:1
+msgid "Spam (AI)"
+msgstr ""
+
+#: includes/Moderation/Policy.php:46
+#: build/admin.js:1
+msgid "Toxic (AI)"
+msgstr ""
+
+#: includes/Moderation/Policy.php:47
+#: build/admin.js:1
+msgid "Harassment (AI)"
+msgstr ""
+
+#: includes/Moderation/Policy.php:48
+#: build/admin.js:1
+msgid "Off-topic (AI)"
+msgstr ""
+
+#: includes/Moderation/Policy.php:49
+#: build/admin.js:1
+msgid "Personal data (AI)"
+msgstr ""
+
+#. translators: 1: links found, 2: allowed
+#: includes/Moderation/Rules.php:54
+#, php-format
+msgid "%1$d links (max %2$d)"
+msgstr ""
+
+#. translators: %s: matched words
+#: includes/Moderation/Rules.php:66
+#, php-format
+msgid "Blocked words: %s"
+msgstr ""
+
+#. translators: 1: count, 2: minutes
+#: includes/Moderation/Rules.php:77
+#, php-format
+msgid "%1$d posts in %2$d minutes"
+msgstr ""
+
+#. translators: %d: earlier copies
+#: includes/Moderation/Rules.php:87
+#, php-format
+msgid "Same text posted %d time elsewhere"
+msgid_plural "Same text posted %d times elsewhere"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: data types
+#: includes/Moderation/Rules.php:96
+#, php-format
+msgid "Personal data: %s"
+msgstr ""
+
+#. translators: %d: number of words
+#: includes/Moderation/Rules.php:105
+#, php-format
+msgid "%d insult or swear word"
+msgid_plural "%d insult or swear words"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Moderation/Rules.php:111
+msgid "Akismet marked this as spam"
+msgstr ""
+
+#: includes/Moderation/Rules.php:147
+msgid "email"
+msgstr ""
+
+#: includes/Moderation/Rules.php:148
+msgid "phone number"
+msgstr ""
+
+#: includes/Moderation/Rules.php:149
+msgid "card number"
+msgstr ""
+
+#: includes/Moderation/Rules.php:150
+msgid "IP address"
+msgstr ""
+
+#: includes/Moderation/Rules.php:151
+msgid "home address"
+msgstr ""
+
+#: includes/Moderation/Rules.php:152
+msgid "ID number"
+msgstr ""
+
+#: includes/Moderation/Rules.php:153
+msgid "full name"
+msgstr ""
+
+#: includes/Moderation/Sources.php:428
+msgid "Log in to reply."
+msgstr ""
+
+#: includes/Moderation/Sources.php:432
+msgid "Write a reply first."
+msgstr ""
+
+#: includes/Moderation/Sources.php:436
+#: build/admin.js:5
+msgid "bbPress is not active."
+msgstr ""
+
+#. translators: %s: topic title
+#: includes/Moderation/Sources.php:445
+#, php-format
+msgid "Reply To: %s"
+msgstr ""
+
+#: includes/Moderation/Sources.php:454
+#: includes/Moderation/Sources.php:476
+msgid "The reply could not be saved."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:203
+#: includes/Rest/Admin_Controller.php:241
+msgid "Unknown action."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:206
+msgid "The status could not be changed. The item may have been deleted."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:221
+msgid "Select at least one item."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:228
+msgid "DEV3 AI is not available. Add a Gemini API key in API Config and set the AI mode in Policy."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:394
+msgid "The summary is empty."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:462
+msgid "Nothing to scan in that period."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:486
+msgid "Paste a sample comment first."
+msgstr ""
+
+#: includes/Rest/Admin_Controller.php:504
+msgid "You do not have permission to use DEV3 AI."
+msgstr ""
+
+#: includes/Rest/Public_Controller.php:61
+msgid "This check is turned off."
+msgstr ""
+
+#: includes/Settings.php:213
+#: build/admin.js:5
+msgid "Thanks for the feedback"
+msgstr ""
+
+#: includes/Settings.php:214
+#: build/admin.js:5
+msgid "Thanks for sharing your thoughts, {author}! We really appreciate you taking the time to comment on \"{post}\"."
+msgstr ""
+
+#: includes/Settings.php:217
+#: build/admin.js:5
+msgid "Keep it kind"
+msgstr ""
+
+#: includes/Settings.php:218
+#: build/admin.js:5
+msgid "Hi {author}, thanks for joining the discussion. Please keep comments respectful so everyone feels welcome here."
+msgstr ""
+
+#: includes/Settings.php:221
+#: build/admin.js:5
+msgid "We will look into it"
+msgstr ""
+
+#: includes/Settings.php:222
+#: build/admin.js:5
+msgid "Thanks {author}, good question. We are checking this and will update this thread soon. The {site} team"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Loading"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused: monthly budget reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adjust the cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Try again"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use a hex colour like #4f46e5."
+msgstr ""
+
+#: build/admin.js:1
+msgid "picker"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Background job"
+msgstr ""
+
+#. translators: 1: processed, 2: total, 3: percent
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s processed (%3$s%%)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Starting…"
+msgstr ""
+
+#. translators: %s: failed count
+#: build/admin.js:1
+#, js-format
+msgid "%s failed"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Retry failed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show failed items"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated AI spend this month"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI off"
+msgstr ""
+
+#. translators: %s: cap
+#: build/admin.js:1
+#, js-format
+msgid "of %s cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI turned off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI paused · cap reached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Near cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget used"
+msgstr ""
+
+#. translators: 1: requests, 2: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s requests · %2$s tokens"
+msgstr ""
+
+#. translators: %s: date
+#: build/admin.js:1
+#, js-format
+msgid "resets %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Set a monthly cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dismiss notification"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3CM_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3CM_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models & generation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Engine settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Image model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for image generation. Default: gemini-2.5-flash-image"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Embedding model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Used for semantic search. Default: gemini-embedding-001"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative (0–1)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Costs are estimated from token counts and Google’s list prices. Check exact billing in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Budget and safety settings saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save budget & safety"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Monthly AI budget cap"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI pauses when the estimated spend this month reaches the cap. 0 = no cap."
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI features"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Turn off to stop every AI call. The plugin keeps working without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Storefront AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Kill switch for visitor-facing AI. Visitors get the non-AI fallback."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cache AI results"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reuse answers for identical requests to save tokens."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mask personal data"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace emails, phone and card numbers before text is sent to Google Gemini."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pagination"
+msgstr ""
+
+#. translators: 1: first row, 2: last row, 3: total rows
+#: build/admin.js:1
+#, js-format
+msgid "%1$s–%2$s of %3$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Previous page"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:1
+#, js-format
+msgid "Page %1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Next page"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing here yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sort by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Est. cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata; costs are estimates. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#. translators: 1: input, 2: output
+#: build/admin.js:1
+#, js-format
+msgid "%1$s in · %2$s out"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage appears here as soon as an AI feature runs."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests logged yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Plugin sections"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Section"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Accept"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Side by side"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not saved yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft view"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit JSON"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit draft"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Current"
+msgstr ""
+
+#. translators: %s: token count
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cached"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reject"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done editing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The JSON is not valid. Fix it or regenerate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Live"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Held"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Spam"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Screened items per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Day"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+msgid "Comment"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Product review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Forum topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Forum reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Trash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flag only"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Hold for review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Move to spam"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Toxicity"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Harassment"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Off-topic"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Screened"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Scanned"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Classified by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Moved to spam"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approved"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Moved to trash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Marked reviewed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replied"
+msgstr ""
+
+#: build/admin.js:1
+msgid "just now"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%dm ago"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%dh ago"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%dd ago"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Positive"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Neutral"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Negative"
+msgstr ""
+
+#: build/admin.js:1
+#, js-format
+msgid "%1$d positive, %2$d neutral, %3$d negative"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "Dashboard"
+msgstr ""
+
+#: build/admin.js:1
+msgid "What your community posted in the last 30 days and what the moderator caught."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open queue"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connect DEV3 AI for toxicity, harassment and off-topic detection"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rules, the queue, reply templates, lexicon sentiment and the local \"be kind\" nudge already work without AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Needs review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Held or flagged, not reviewed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Screened (30 days)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Held (30 days)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Spam caught (30 days)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Average sentiment"
+msgstr ""
+
+#. translators: %d: AI classified count
+#: build/admin.js:1
+#, js-format
+msgid "%d classified by DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 14 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "New comments, reviews and forum posts by outcome."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Top reasons"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rules and DEV3 AI labels that fired (30 days)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing caught yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasons appear here as soon as a rule or DEV3 AI flags something."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Waiting for review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "All caught up"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing is waiting for a moderator."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Most negative discussions"
+msgstr ""
+
+#. translators: %d: comments
+#: build/admin.js:1
+#, js-format
+msgid "%d comments"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "No discussions yet"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Run a scan in Policy & rules to include existing comments."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Connected sources"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:5
+msgid "WordPress comments"
+msgstr ""
+
+#: build/admin.js:1
+msgid "WooCommerce reviews"
+msgstr ""
+
+#: build/admin.js:1
+msgid "WooCommerce not active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "bbPress topics & replies"
+msgstr ""
+
+#: build/admin.js:1
+msgid "bbPress not active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Akismet verdicts respected"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Akismet not active"
+msgstr ""
+
+#. translators: %s: sync|async
+#: build/admin.js:1
+#, js-format
+msgid "DEV3 AI on (%s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "before publishing"
+msgstr ""
+
+#: build/admin.js:1
+msgid "in the background"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI off"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reply posted."
+msgstr ""
+
+#. translators: %s: source
+#: build/admin.js:1
+#, js-format
+msgid "%s details"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Details"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Approve"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+msgid "Hold"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mark reviewed"
+msgstr ""
+
+#. translators: %s: policy action
+#: build/admin.js:1
+#, js-format
+msgid "Policy: %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+msgid "Reviewed"
+msgstr ""
+
+#. translators: %d: stars
+#: build/admin.js:1
+#, js-format
+msgid "%d/5 stars"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Author"
+msgstr ""
+
+#: build/admin.js:1
+msgid "registered user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Posted on"
+msgstr ""
+
+#: build/admin.js:1
+msgid "When"
+msgstr ""
+
+#: build/admin.js:1
+msgid "IP (hashed)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open in WordPress"
+msgstr ""
+
+#. translators: %s: author
+#: build/admin.js:1
+#, js-format
+msgid "In reply to %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Why it was flagged"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No rule or DEV3 AI label fired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI labels"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI check finished."
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:3
+msgid "Re-scan with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check with DEV3 AI"
+msgstr ""
+
+#. translators: %s: model
+#: build/admin.js:1
+#, js-format
+msgid "Model: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Waiting for the background DEV3 AI check."
+msgstr ""
+
+#: build/admin.js:1
+msgid "The DEV3 AI check failed. Rules decided; try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not checked by DEV3 AI yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Gemini API key in API Config to score spam, toxicity, harassment, off-topic and personal data."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start from a template"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose a template…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approve the comment when I reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Post reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Instructions for DEV3 AI (optional)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. mention the new tutorial, offer to help by email"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Drafting…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft reply with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a Gemini API key in API Config to draft replies in your brand voice."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Post this reply"
+msgstr ""
+
+#: build/admin.js:1
+msgid "History"
+msgstr ""
+
+#: build/admin.js:1
+msgid "by"
+msgstr ""
+
+#: build/admin.js:1
+msgid "rules"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "a moderator"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Flagged but live"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI is re-scanning the selected items in the background."
+msgstr ""
+
+#. translators: %d: items
+#: build/admin.js:3
+#, js-format
+msgid "%d items updated."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Approved."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Moved to spam."
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Mark as spam"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Mark reviewed (keep status)"
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Move to trash"
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "All sources"
+msgstr ""
+
+#: build/admin.js:3
+msgid "All reasons"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Select"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Select item"
+msgstr ""
+
+#: build/admin.js:3
+msgid "(empty)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Reasons"
+msgstr ""
+
+#: build/admin.js:3
+msgid "DEV3 AI check pending…"
+msgstr ""
+
+#: build/admin.js:3
+msgid "No issues"
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Sentiment"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Posted"
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:5
+msgid "Moderation queue"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Comments, reviews and forum posts that rules or DEV3 AI held, spammed or flagged, with the reasons."
+msgstr ""
+
+#. translators: %d: rows
+#: build/admin.js:5
+#, js-format
+msgid "%d rows exported."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Export CSV"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Queue views"
+msgstr ""
+
+#. translators: %d: items
+#: build/admin.js:5
+#, js-format
+msgid "%d items are waiting for the DEV3 AI check. They are processed in the background (and while this screen is open)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Re-scanning with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Search the queue"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Search text, names, emails or reasons…"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Source"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Reason"
+msgstr ""
+
+#. translators: %d: selected
+#: build/admin.js:5
+#, js-format
+msgid "%d selected"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Select all"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Bulk action"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Bulk actions"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Apply"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Nothing here"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Try another search or filter."
+msgstr ""
+
+#: build/admin.js:5
+msgid "New comments, reviews and forum posts are screened as they arrive. Run a scan in Policy & rules to include older ones."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Move to trash?"
+msgstr ""
+
+#: build/admin.js:5
+msgid "The selected items go to the WordPress trash, where they can be restored for 30 days."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Summary"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Discussion"
+msgstr ""
+
+#: build/admin.js:5
+msgid "View post"
+msgstr ""
+
+#. translators: 1: total, 2: live, 3: held, 4: spam
+#: build/admin.js:5
+#, js-format
+msgid "%1$d screened · %2$d live · %3$d held · %4$d spam"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Frequent words"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Summarizing…"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Refresh with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Summarize with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Add a Gemini API key in API Config to summarize discussions. Frequent words and sentiment above work without AI."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Save summary"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Summary saved."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Open questions"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Suggested follow-ups"
+msgstr ""
+
+#. translators: 1: comments, 2: time
+#: build/admin.js:5
+#, js-format
+msgid "Based on %1$d comments · saved %2$s"
+msgstr ""
+
+#: build/admin.js:5
+msgid "New comments arrived since this summary. Refresh it to include them."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Summary removed."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Remove summary"
+msgstr ""
+
+#: build/admin.js:5
+msgid "No summary yet"
+msgstr ""
+
+#: build/admin.js:5
+msgid "DEV3 AI reads the approved comments and drafts a short summary with themes and open questions. You review it before it is saved."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Show the saved summary on the site"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Appears via the Discussion summary block, the [dev3cm_summary] shortcode, or after the content when enabled in Front-end."
+msgstr ""
+
+#: build/admin.js:5
+msgid "The summary now shows on the site."
+msgstr ""
+
+#: build/admin.js:5
+msgid "The summary is hidden from the site."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Latest items"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Forum topics"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Post"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Items"
+msgstr ""
+
+#: build/admin.js:5
+msgid "held"
+msgstr ""
+
+#: build/admin.js:5
+msgid "spam"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Mix"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Out of date"
+msgstr ""
+
+#: build/admin.js:5
+msgid "On site"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Saved"
+msgstr ""
+
+#: build/admin.js:5
+msgid "None"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Discussions"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Sentiment per post, product and forum topic. Open one to see themes and create a summary."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Search posts"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Search by post title…"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Sort"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Latest activity"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Most active"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Most negative"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Most positive"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Posts appear here once comments are screened. Run a scan in Policy & rules to include older comments."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Links"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Comments with more links than allowed."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Words or phrases in the text, name, email or website."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Posting rate"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Many posts from one IP address or email in a short time."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Duplicates"
+msgstr ""
+
+#: build/admin.js:5
+msgid "The same text pasted on other posts (typical spam)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Emails, phone numbers, card numbers or IP addresses in the text."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Built-in list of insults and swear words (works without AI)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Records Akismet spam verdicts as a reason when Akismet is active."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Adverts, SEO links, scams and gibberish."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Insults, profanity aimed at people, demeaning language. Criticism of ideas is allowed."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Threats, targeted attacks, doxxing, sexual harassment."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Nothing to do with the post it was written under."
+msgstr ""
+
+#: build/admin.js:5
+msgid "The writer shares personal data (address, phone, ID…)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Links allowed"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Blocked words and phrases"
+msgstr ""
+
+#: build/admin.js:5
+msgid "One per line (or comma separated). Whole words, not case sensitive."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Posts allowed"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Within minutes"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Look back (days)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Discard"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Save changes"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Policy & rules"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Decide what is screened and what happens when a rule or DEV3 AI label fires. The moderator only holds or spams: it never approves or deletes."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Sources"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Where the moderator screens new posts."
+msgstr ""
+
+#: build/admin.js:5
+msgid "WooCommerce product reviews"
+msgstr ""
+
+#: build/admin.js:5
+msgid "WooCommerce is not active."
+msgstr ""
+
+#: build/admin.js:5
+msgid "bbPress topics and replies"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Skip moderators and admins"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Users who can moderate comments are trusted."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Rule screen"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Fast checks that run before anything else, with no AI and no network. The strictest action wins."
+msgstr ""
+
+#. translators: %s: rule
+#. translators: %s: label
+#: build/admin.js:5
+#, js-format
+msgid "Action for %s"
+msgstr ""
+
+#: build/admin.js:5
+msgid "DEV3 AI classification"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Scores each post 0–100% for five labels. Set the action and the score that triggers it."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Add a Gemini API key in API Config to turn this on. Until then only the rule screen runs."
+msgstr ""
+
+#: build/admin.js:5
+msgid "When to run"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Before publishing (recommended)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "In the background after posting"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Off (rules only)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Before publishing waits for DEV3 AI (up to the timeout) and falls back to rules, then retries in the background."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Timeout (seconds)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "AI policy"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Label"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Action"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Trigger at score"
+msgstr ""
+
+#. translators: %s: label
+#: build/admin.js:5
+#, js-format
+msgid "Score for %s (0.05–1)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Data"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Keep moderation records (days)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "0 keeps them forever. Comments themselves are never deleted."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Delete plugin data when uninstalling"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Policy tester"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Paste a sample comment to see what the saved rules (and DEV3 AI) would do. Nothing is stored."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Sample comment"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Include DEV3 AI scores"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Test policy"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Outcome:"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Publish normally"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Scan existing content"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Screens comments, reviews and forum posts that were posted before the plugin was active, and fills Discussions with sentiment."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Posted in the last (days)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Also check with DEV3 AI (uses tokens)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Move matches per policy (hold/spam)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Off: matches are only flagged in the queue, nothing already live is hidden."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Start scan"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Scanning existing content"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Friendly"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Professional"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Warm and personal"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Playful"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Short and direct"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Empathetic"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Replies & voice"
+msgstr ""
+
+#: build/admin.js:5
+msgid "How replies sound. DEV3 AI drafts follow this voice; templates work without AI."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Brand voice"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Used for every \"Draft reply with DEV3 AI\". Drafts are never posted until you accept them."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Tone"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Sign-off"
+msgstr ""
+
+#: build/admin.js:5
+msgid "e.g. – Maya, community team"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Guidelines"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Facts and rules the replies may use: support email, return policy, how you talk about competitors…"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Never say"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Words or phrases replies must avoid."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Reply templates"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Placeholders: {author} (first name), {post} (post title), {site} (site name)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Add template"
+msgstr ""
+
+#. translators: %d: number
+#: build/admin.js:5
+#, js-format
+msgid "Template %d name"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Remove template"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Text"
+msgstr ""
+
+#: build/admin.js:5
+msgid "No templates"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Add canned replies you use often."
+msgstr ""
+
+#: build/admin.js:5
+msgid "THIS IS SO STUPID, WHAT AN IDIOT!!!!"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Try a comment"
+msgstr ""
+
+#: build/admin.js:5
+msgid "No nudge: this comment would post straight away."
+msgstr ""
+
+#: build/admin.js:5
+msgid "The nudge is off."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Front-end"
+msgstr ""
+
+#: build/admin.js:5
+msgid "What visitors see on comment, review and forum forms. Text shown to visitors carries no DEV3 branding."
+msgstr ""
+
+#: build/admin.js:5
+msgid "\"Be kind\" nudge"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Before a comment is sent, the writer gets a gentle prompt if it may come across as hurtful. They can edit or post anyway."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Show the nudge"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Uses a local word check in the browser, no network."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Ask DEV3 AI before posting"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Catches subtle hostility the word list misses. Falls back to the local check if AI is slow or off (6 s)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Needs a Gemini API key (API Config)."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Offer kinder wording"
+msgstr ""
+
+#: build/admin.js:5
+msgid "DEV3 AI suggests a rewrite the writer may use."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Title"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Message"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Community note"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Show a note under the comment box"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Note"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Discussion summaries on the site"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Only summaries you saved and marked \"Show on site\" in Discussions appear."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Placement"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Only where I add the block or shortcode"
+msgstr ""
+
+#: build/admin.js:5
+msgid "After the post content (automatic)"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Block: \"Discussion summary\". Shortcode: [dev3cm_summary] or [dev3cm_summary post_id=\"123\"]."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Add \"written with AI and reviewed\" note"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Accent colour"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Local check only. Colours and fonts follow your theme on the site."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Queue"
+msgstr ""
+
+#: build/admin.js:5
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:5
+msgid "Connect Google Gemini, pick models and set a monthly AI budget."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Requests, tokens and estimated cost of every DEV3 AI feature."
+msgstr ""
+
+#: build/admin.js:5
+msgid "Made by DEV3 Technologies · AI by Google Gemini, using your own API key."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Shows the accepted discussion summary of this post (or of the post ID set in the block settings). Create and approve summaries in DEV3 AI Moderator → Discussions and switch on \"Show on site\"."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "What readers are saying: a short, moderator-approved summary of the comments."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Post ID"
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Leave 0 to use the current post."
+msgstr ""
+
+#: build/blocks.js:1
+msgid "Show title"
+msgstr ""
